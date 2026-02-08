@@ -31,8 +31,8 @@ btn = tk.Button(root, text="START", bg="grey", font=("Arial", 15), command=start
 btn.place(x=50, y=100, width=150, height=40)
 user_text = tk.StringVar()
 
-from_var = tk.StringVar()   # звідки копіюємо
-to_var = tk.StringVar()     # куди копіюємо
+from_var = tk.StringVar()  
+to_var = tk.StringVar()     
 
 entry_field = tk.Entry(root, textvariable=from_var)
 entry_field.place(x=50, y=150, width=150, height=30)
@@ -42,3 +42,4 @@ entry.place(x=50, y=200, width=150, height=30)
 
 
 root.mainloop()
+
