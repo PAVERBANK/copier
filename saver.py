@@ -1,6 +1,6 @@
 import tkinter as tk
 import shutil as sh
-import keyboard as ke # type: ignore
+import keyboard as ke 
 
 root = tk.Tk()
 root.title("kopyer")
@@ -39,5 +39,6 @@ entry_field.place(x=50, y=150, width=150, height=30)
 
 entry = tk.Entry(root, textvariable=to_var)
 entry.place(x=50, y=200, width=150, height=30)
+
 
 root.mainloop()
