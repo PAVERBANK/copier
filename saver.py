@@ -7,6 +7,14 @@ root.title("kopyer")
 root.geometry("600x700")
 root.configure(bg="black")
 
+btn11=True
+def check_keys1():
+    global btn11
+    btn11=False
+def xyita():
+    if btn11==False:
+            print("Цикл зупинено")
+            return 
 def check_keys():
     
     if ke.is_pressed("F1"):
@@ -16,20 +24,25 @@ def check_keys():
         except Exception as e:
             print(f"Помилка: {e}")
     
-    
-    if ke.is_pressed("F2"):
-        print("Цикл зупинено")
-        return 
+    try:
+        xyita()
+    except Exception as e:
+        print("не вишло")
 
-    root.after(100, check_keys)
+    
 
 def start_loop():
-    print("Моніторинг клавіш запущено...")
+    print("Моніторинг клавіш запущено")
     check_keys()
+def start_loop1():
+    print("Моніторинг клавіш зупинено")
+    check_keys1()
 
 btn = tk.Button(root, text="START", bg="grey", font=("Arial", 15), command=start_loop)
 btn.place(x=50, y=100, width=150, height=40)
-user_text = tk.StringVar()
+
+btn1 = tk.Button(root, text="STOP", bg="grey", font=("Arial", 15), command=start_loop1)
+btn1.place(x=250, y=100, width=150, height=40)
 
 from_var = tk.StringVar()  
 to_var = tk.StringVar()     
@@ -42,4 +55,3 @@ entry.place(x=50, y=200, width=150, height=30)
 
 
 root.mainloop()
-
